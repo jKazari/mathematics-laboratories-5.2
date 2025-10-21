@@ -1,0 +1,19 @@
+# Zadanie 9.14
+Czas pracy bez awarii pewnej drukarki ma rozkład normalny ze średnią 549 i odchyleniem standardowym 68. Znajdź prawdopodobieństwo, że drukarka będzie działać bez awarii przynajmniej 500 godzin.
+
+# Zadanie 9.15
+Moc prądu wytwarzanego przez baterię słoneczną ma rozkład normalny ze średnią 15.6 kW i odchyleniem standardowym 4.1 kW. Ile co najmniej kilowatów wytworzy bateria z 95% pewnością?
+
+# Zadanie 9.16
+Wyniki egzaminu GMAT studentów, którzy rozważają aplikowanie na uniwersytet, mają rozkład normalny z wartością oczekiwaną 487 i odchyleniem standardowym 98.
+a. Jaki procent studentów uzyska wyniki powyżej 500?
+b. Jaki procent studentów uzyska wynik między 600 a 700?
+c. Jeśli uniwersytet chciałby umożliwić aplikowanie tylko 75% najlepszych, jaka powinna być graniczna minimalna liczba punktów z GMAT?
+d. Znajdź największy przedział, który będzie zawierał wyniki 75% studentów
+
+# Zadanie
+Firma zarządzająca centrami handlowymi otrzymała dane, z których wynika, że w pewnym mieście wydatki osób odwiedzających centra handlowe mają rozkład normalny o średniej 1870 zł/miesiąc i odchyleniu standardowym 625 zł/miesiąc. Firma chce otrzymać następujące informacje
+a. Jaki jest udział klientów wydających w centrach mniej niż 1400 zł/miesiąc
+b. Jaki jest udział klientów wydających więcej niż 2000 zł/miesiąc
+c. Jaki jest udział klientów wydających więcej niż 500, ale mniej niż 1000 zł/miesiąc
+d. Jaka jest dolna granica wydatków 20% tych osób, które wydają w centrach najwięcej
