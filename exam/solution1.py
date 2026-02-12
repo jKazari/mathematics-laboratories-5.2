@@ -12,29 +12,47 @@ x = data["masa"]
 
 stat, p_value = stats.shapiro(x)
 
-print("Hipotezy:")
+print("1. Hipotezy:")
 print("   H₀: Rozkład zmiennej MASA jest rozkładem normalnym")
 print("   H₁: Rozkład zmiennej MASA nie jest rozkładem normalnym\n")
 
-print(f"Wartość p = {p_value:.6f}\n")
+print(f"   Wartość p = {p_value:.6f}\n")
 
 if p_value < ɑ:
 	decision = "Należy odrzucić H₀"
 else:
 	decision = "Brak podstaw do odrzucenia H₀"
 
-print(f"{decision} przy poziomie istotności ɑ = 0.05.")
+print(f"   {decision} przy poziomie istotności ɑ = 0.05")
+
+print("2. Hipotezy:")
+print("   H₀: Kobiety z populacji nie są średnio niższe od mężczyzn z populacji (μK ≥ μM)")
+print("   H₁: Kobiety z populacji są średnio niższe od mężczyzn z populacji (μK < μM)\n")
 
 x = data[data["płeć"] == "M"]["wzrost"]
 y = data[data["płeć"] == "K"]["wzrost"]
 
-n = len(x)
-m = len(y)
+nM = len(x)
+nK = len(y)
 
-xrow = np.mean(x)
-yrow = np.mean(y)
+x̄ = np.mean(x)
+ȳ = np.mean(y)
 
 sM = np.std(x, ddof=1)
 sK = np.std(y, ddof=1)
 
-print(xrow, yrow)
+t = (x̄ - ȳ) / np.sqrt((sM**2 / nM) + (sK**2 / nK))
+df = (((sM**2 / nM) + (sK**2 / nK))**2) / (((sM**2 / nM)**2) / (nM-1) + ((sK**2 / nK)**2) / (nK-1))
+
+t_crit = stats.t.ppf(1-ɑ, df)
+
+print("   Obliczenia:")
+print(f"   Statystyka t = {t:.4f}")
+print(f"   t krytyczne = {t_crit:.4f}\n")
+
+if t > t_crit:
+	decision = "Należy odrzucić H₀"
+else:
+	decision = "Brak podstaw do odrzucenia H₀"
+
+print(f"   {decision} przy poziomie istotności ɑ = 0.05")
